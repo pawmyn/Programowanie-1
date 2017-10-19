@@ -17,7 +17,7 @@ int main()
 	double y = sin(x);
 	double hmax = (v0*v0*y*y) / (2 * g);
 
-	cout << hmax << endl;
+	cout << "Wzniesie sie na hmax = " << hmax << endl;
 
 	system("pause");
 	return 0;
