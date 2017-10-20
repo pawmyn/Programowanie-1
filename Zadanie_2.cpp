@@ -1,3 +1,4 @@
+#define  _USE_MATH_DEFINES
 #include <iostream>
 #include <cmath>
 
@@ -6,33 +7,36 @@ using namespace std;
 int main()
 
 {
-	double bbloat = 49.814774;
-	double bblan = 19.051674;
-		
-	double krloat = 50.058585;
-	double krlan = 19.945813;
-		
-	double ktloat = 49.882513;
-	double ktlan = 19.224914;
-		
-	double osloat = 50.035534;
-	double oslan = 19.217743;
+	double bielskolat = 49.822280;
+	double bielskolon = 19.058619;
 
-	double distbboskr_a = bblan + oslan + krlan;
-	double distbboskr_a = bbloat + osloat + krloat;
+	double czechowicelat = 49.901693;
+	double czechowicelon = 18.991822;
 
-	double distbbktkr_b = bblan + ktlan + krlan;
-	double distbbktkr_b = bbloat + ktloat + krloat;
+	double oswiecimlat = 50.034952;
+	double oswiecimlon = 19.210415;
 
-	double wynik = sqrt
-	(
-		pow((distbbktkr_b + distbbktkr_a), 2) +
-		pow((distbboskr_a + distbboskr_b), 2)
-	);
+	double ketylat = 49.880680;
+	double ketylon = 19.222878;
 
 
-		cout << wynik << endl;
-		system("pause");
-		return 0;
+	double distancebielczechosw_lat = bielskolat - czechowicelat - oswiecimlat;
+	double distancebielczechosw_lon = bielskolon - czechowicelon - oswiecimlon;
+
+	double distancebielketyosw_lat = bielskolat - ketylat - oswiecimlat;
+	double distancebielketyosw_lon = bielskolon - ketylon - oswiecimlon;
+
+
+	double distance_a = sqrt(pow(distancebielczechosw_lat, 2) + pow(distancebielczechosw_lon, 2));
+	
+	double distance_b = sqrt(pow(distancebielketyosw_lat, 2) + pow(distancebielketyosw_lon, 2));
+
+
+	cout << "Odleglosc Bielsko-Czecowice-Oswiecim jest rowna " << distance_a << endl;
+	cout << "Odleglosc Bielsko-Kety-Oswiecim jest rowna " << distance_b << endl;
+	
+	system("pause");
+
+	return(0);
 
 }
