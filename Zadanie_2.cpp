@@ -34,4 +34,5 @@ int main()
 		cout << wynik << endl;
 		system("pause");
 		return 0;
+
 }
