@@ -1,4 +1,4 @@
-//hmax - rzut ukosny
+//hmax - rzut ukosny 
 
 #define _USE_MATH DEFINES
 #include <iostream>
@@ -8,9 +8,8 @@
 using namespace std;
 
 int main()
-
 {
-	const double g = 9.81;
+	const double g = 9.81; // stala
 	double v0, x;
 	cout << "Podaj Vo: ";
 	cin >> v0;
@@ -24,5 +23,4 @@ int main()
 
 	system("pause");
 	return 0;
-
 }
