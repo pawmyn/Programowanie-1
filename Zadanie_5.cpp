@@ -10,7 +10,7 @@ int main()
 
 { 
 	const double g = 9.81;
-	double x = 30, v = 10;
+	double x = 30, v = 10; // x - kat alpha
 	double z = v*v*(sin(2 * x)) / g;
 
 	cout << z << endl;

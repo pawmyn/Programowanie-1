@@ -1,3 +1,6 @@
+//hmax - rzut ukosny
+
+#define _USE_MATH DEFINES
 #include <iostream>
 #include <cmath>
 
@@ -14,8 +17,8 @@ int main()
 	cout << "Podaj kat sin: ";
 	cin >> x;
 
-	double y = sin(x);
-	double hmax = (v0*v0*y*y) / (2 * g);
+	double y = sin(x); // x - kat 
+	double hmax = (v0*v0*y*y) / (2 * g); // wzor 
 
 	cout << "Wzniesie sie na hmax = " << hmax << endl;
 
