@@ -1,4 +1,4 @@
-//Obliczanie rabatu uzale¿nione od trzech czynników. 
+//Obliczanie rabatu uzale¿nione od dwóch czynników. 
 
 #define _USE_MATH_DEFINES
 #include <iostream>
@@ -10,7 +10,7 @@ int main()
 
 
 {
-	double cenadet, art, x; // x - do zap³aty
+	double cenadet, art; 
 
 	int dzt;
 	
@@ -21,16 +21,19 @@ int main()
 	cout << "Podaj dzien tygodnia: ";
 	cin >> dzt;
 
+	double bezrabatu = art*cenadet;
+	double dozapl; // x - do zap³aty
 
 	if (art > 20)
-		x *= (1. - 0.18)*cenadet*art;
+		dozapl *= (1. - 0.18)*cenadet*art;
 
 	else if (dzt >= 1 && dzt <= 3)
-		x *= (1. - 0.12)*cenadet*art;
+		dozapl *= (1. - 0.12)*cenadet*art;
 
 	
-	
-	cout << x << endl;
+	cout << dozapl << endl;
+	cout << bezrabatu << endl;
+
 
 	system("PAUSE");
 	return 0;
