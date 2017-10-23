@@ -8,10 +8,10 @@ using namespace std;
 
 int main()
 {
-	double cenadet, art; 
+	double cenadet, art;
 
 	int dzt;
-	
+
 	cout << "Podaj ilosc artykulow: ";
 	cin >> art;
 	cout << "Podaj kwote zaplaty: ";
@@ -19,25 +19,29 @@ int main()
 	cout << "Podaj dzien tygodnia: ";
 	cin >> dzt;
 
-	double bezrabatu = art*cenadet;
-	double dozapl = cenadet*art;
+	for (int d = dzt; d <= 7;) //Dodanie ograniczenia dni tygodnia
+	{
+		
+		double bezrabatu = art*cenadet;
+		double dozapl = cenadet*art;
 
-	if (art > 20)
-		dozapl *= (1. - 0.18);
+		if (art > 20)
+			dozapl *= (1. - 0.18);
+			
+		else if (dzt >= 1 && dzt <= 3)
+			dozapl *= (1. - 0.12);
 
-	else if (dzt >= 1 && dzt <= 3)
-		dozapl *= (1. - 0.12);
+		else if (dzt >= 4 && dzt <= 7)
+			dozapl *= 1;
 
-	else if (dzt >= 4 && dzt <= 7)
-		dozapl *= 1;
+		cout << "Do zaplaty: " << dozapl << endl;
+		cout << "Cena bez rabatu: " << bezrabatu << endl;
+		cout << "Zaoszczedziles: " << bezrabatu - dozapl << endl;
 
-	else if (dzt >= 8)
+		system("PAUSE");
+	}
+		
 		cout << "Bledny dzien tygodna" << endl; // Przekroczenie wartosci dni tygodnia
-
-	cout << "Do zaplaty: " << dozapl << endl;
-	cout << "Cena bez rabatu: " <<bezrabatu << endl;
-	cout << "Zaoszczedziles: " << bezrabatu - dozapl << endl; 
-
-	system("PAUSE");
-	return 0;
+		system("PAUSE");
+		return 0;	
 }
