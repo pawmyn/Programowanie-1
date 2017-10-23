@@ -27,7 +27,13 @@ int main()
 
 	else if (dzt >= 1 && dzt <= 3)
 		dozapl *= (1. - 0.12);
-   
+
+	else if (dzt >= 4 && dzt <= 7)
+		dozapl *= 1;
+
+	else if (dzt >= 8)
+		cout << "Bledny dzien tygodna" << endl; // Przekroczenie wartosci dni tygodnia
+
 	cout << "Do zaplaty: " << dozapl << endl;
 	cout << "Cena bez rabatu: " <<bezrabatu << endl;
 	cout << "Zaoszczedziles: " << bezrabatu - dozapl << endl; 
