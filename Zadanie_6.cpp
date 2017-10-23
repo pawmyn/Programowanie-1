@@ -22,17 +22,20 @@ int main()
 	cin >> dzt;
 
 	double bezrabatu = art*cenadet;
-	double dozapl; // x - do zap³aty
+	double dozapl; 
 
 	if (art > 20)
-		dozapl *= (1. - 0.18)*cenadet*art;
+		dozapl = (1. - 0.18)*cenadet*art;
 
 	else if (dzt >= 1 && dzt <= 3)
-		dozapl *= (1. - 0.12)*cenadet*art;
-
+		dozapl = (1. - 0.12)*cenadet*art;
+   
+	else if (dzt >= 4 && dzt <= 7)
+		dozapl = cenadet*art;
 	
-	cout << dozapl << endl;
-	cout << bezrabatu << endl;
+	cout << "Do zaplaty: " << dozapl << endl;
+	cout << "Cena bez rabatu: " <<bezrabatu << endl;
+	cout << "Zaoszczedziles: " << bezrabatu - dozapl << endl; 
 
 
 	system("PAUSE");
