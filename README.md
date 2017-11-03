@@ -11,3 +11,5 @@ Zadanie 5. Zasięg rzutu poziomego.
 Zadanie 6. Obliczanie rabatu uzależnione od dwóch czynników (wykluczających się).
 
 Zadanie 7. zad. 4d (pierwiastki, stałe, potęgi).
+
+Zadanie 8. zad. 5a Obliczanie pierwiastków trójmianu kwadratowego. 
