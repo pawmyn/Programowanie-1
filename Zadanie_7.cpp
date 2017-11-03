@@ -1,4 +1,4 @@
-//Nowe zadanie
+//Pierwiaski, sta³e, logarytmy, potêgi
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <iostream>
