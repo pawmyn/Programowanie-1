@@ -9,3 +9,5 @@ Zadanie 4. Rzut ukośny - hmax.
 Zadanie 5. Zasięg rzutu poziomego. 
 
 Zadanie 6. Obliczanie rabatu uzależnione od dwóch czynników (wykluczających się).
+
+Zadanie 7. zad. 4d (pierwiastki, stałe, potęgi).
